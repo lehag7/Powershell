@@ -1,3 +1,6 @@
+## Author: lehag
+## Code: CheckAdminRights.ps1
+
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 if (($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) {
     Write-Host "You are running as the administrator."
